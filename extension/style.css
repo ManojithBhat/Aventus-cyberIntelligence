@@ -1,0 +1,105 @@
+body{
+    font-family: monospace;
+    min-width: 300px;
+    min-height: 200px;
+    width: 350px;
+    height: 250px;
+    background-color: white;
+    border-radius: 5%;
+    
+}
+.heading{
+    font-size: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 30em;
+    animation: type 2s steps(60, end) ; 
+}
+@keyframes type{ 
+    from { width: 0; } 
+  } 
+p{
+    opacity: 0;
+    padding: 15px;
+    font-size: 19px;
+}
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+.loading-paragraph{
+    position: relative;
+    font-size: 20px;
+    top: -17px;
+    margin-left: 20px;
+}
+p{
+    animation: fadeIn 1s ease-out 0.5s forwards;
+}
+.redcolor{
+    color:red
+}
+.greencolor{
+    color: green;
+}
+.threat{
+    color: black;
+    font-size: 22px;
+}
+.slueth{
+    color: green;
+    font-size: 22px;
+}
+.heading-set{
+    display: flex;
+    flex-wrap: no-wrap;
+    align-items: center;
+}
+.scanningdiv{
+    margin: 53px 0px 0px 38px;
+    background-color: rgb(237 237 237);
+    border-radius: 11px;
+}
+.insidescanning{
+    font-size: 16px;
+    background-color: white;
+    padding: 5px;
+    position: relative;
+    top: 9px;
+    width: 200px;
+    margin-left: 30px;
+    text-align: center;
+    border-radius: 8px ;
+    font-weight: 550; 
+}
+.correctimage{
+    position: relative;
+    height: 17px;
+    width: 21px;
+    top: 2px;
+}
+.wrongimage{
+    position: relative;
+    height: 18px;
+    width: 33px;
+    top: 2px;
+}
+.documentation{
+    height: 30px;
+    width: 130px;
+    color: white;
+    background-color: green;
+    font-size: 15px;
+    border-radius: 10px;
+    font-weight: 550;
+    text-align: center;
+    position: relative;
+    top: -11px;
+    margin-left: auto;
+    margin-right: 4px;
+    cursor: pointer;
+}
+.documentation span{
+    position: relative;
+    top: 4px;
+}

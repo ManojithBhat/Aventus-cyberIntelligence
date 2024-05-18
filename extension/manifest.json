@@ -1,0 +1,13 @@
+{
+    "name":"Insta Check",
+    "version":"1.0",
+    "manifest_version":3,
+    "permissions": ["activeTab"],
+    "background": {
+        "service_worker": "popup.js"
+    },
+    "action":{
+        "default_icon":"logo.png",
+        "default_popup":"popup.html"
+    }
+}
