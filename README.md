@@ -39,4 +39,4 @@ Go to your preferred browser and navigate to settings. In settings search manage
 Make sure your index.js is running and listening, go to your preferred instagram user and click on extension. Run the extension.
 
 ### Step 6:Run the Extension on Instagram
-The extension will issue a pop up while loading and running the model later indicating if the user is spam or not
+The extension will issue a pop up while loading and running the model later indicating if the user is spam or not.
