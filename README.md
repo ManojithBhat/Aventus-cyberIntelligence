@@ -19,6 +19,9 @@ Install all the required dependencies. Make sure you have Python installed forem
 ```bash
 pip install tld
 pip install joblib
+pip install pandas
+pip install numpy
+pip install scikit-learn
 npm install express cors axios body-parser child-process module
 ```
 ### Step 3: Run the server
