@@ -35,8 +35,16 @@ inorder to dynamically observe any changes made to the code
 ### Step 4:Load the extension into your browser
 Go to your preferred browser and navigate to settings. In settings search manage extension options and then turn on developer mode usually found on the top right corner. Then click on load or unload package and add extension folder 
 
+![extension](./assests/extension.png)
+<br>
 ### Step 5:Ensure the Server is Running
 Make sure your index.js is running and listening, go to your preferred instagram user and click on extension. Run the extension.
 
+![running](./assests/running.png)
+
 ### Step 6:Run the Extension on Instagram
-The extension will issue a pop up while loading and running the model later indicating if the user is spam or not.
+The extension will issue a pop up while loading and running the model later indicating if the user is spam or not
+
+![spam](./assests/spam.png)
+
+![notspam](./assests/notspam.png)
