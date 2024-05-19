@@ -1,4 +1,4 @@
-# InstaChecker
+# Insta-Check
 
 An extension to effectively detect spam accounts on Instagram and keep you safe from giving your data away voluntarily.
 
@@ -24,6 +24,7 @@ pip install numpy
 pip install scikit-learn
 npm install express cors axios body-parser child-process module
 ```
+
 ### Step 3: Run the server
 Open index.js in your code viewer(preferably VS code) and run the index.js file by using the following command
 ```bash
