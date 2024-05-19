@@ -61,7 +61,12 @@ def count_numerical_characters(s):
 def classify_url(url,followers,following, posts):
     data=process_input(url,followers,following, posts)
     pred=model.predict(data)
-    return pred
+    prob = model.predict_proba(data)
+    if pred == 1:
+        confidences= prob.max(axis=1)
+    else:
+        confidences= prob.min(axis=1)
+    return pred, (confidences*10)[0]
 
 if __name__ == '__main__':
     blockPrint()
@@ -72,8 +77,9 @@ if __name__ == '__main__':
     #print(ret_full_name(username))
     #print(len(ret_full_name(username).split()))
     followers,following, posts = extract_instagram_stats(url)
-    result = classify_url(username, followers,following, posts)
+    result, score = classify_url(username, followers,following, posts)
     res=result.tolist()
+    res.append(score)
     enablePrint()
-    #print(res[0])
-    print(json.dumps(res))
+    print(res[0]," ",round(res[1],1))
+    #print(json.dumps(res))

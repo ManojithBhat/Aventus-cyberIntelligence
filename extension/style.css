@@ -8,6 +8,11 @@ body{
     border-radius: 5%;
     
 }
+
+a{
+    text-decoration: none;
+}
+
 .heading{
     font-size: 20px;
     white-space: nowrap;
@@ -57,11 +62,10 @@ p{
 }
 .scanningdiv{
     margin: 53px 0px 0px 38px;
-    background-color: rgb(237 237 237);
     border-radius: 11px;
 }
 .insidescanning{
-    font-size: 16px;
+    font-size: 30px;
     background-color: white;
     padding: 5px;
     position: relative;

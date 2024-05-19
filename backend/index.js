@@ -21,7 +21,7 @@ app.get('/endpoint/:id', (req, res) => {
   
   pythonProcess.stdout.on('data', (data) => {
       result += data.toString();
-      console.log(result);
+      //console.log(result);
   });
    
   pythonProcess.stderr.on('data', (data) => {
@@ -35,12 +35,27 @@ app.get('/endpoint/:id', (req, res) => {
   pythonProcess.on('close', (code) => {
       if (!responseSent) { // Check if response has already been sent
           responseSent = true;
+          
+          console.log('before splitting',result)
+          const predictionAndScore = result.split(' ');
+
+          const prediction = predictionAndScore[0];
+          const score = predictionAndScore[3];
+          console.log('score is ',score,typeof(score));
+
+          const responseObject = {
+            prediction: prediction,
+            score: score
+          };
+
+          console.log(responseObject)
+
           if (code === 0) {
-            console.log(result[1])
-              if(result[1] === "0") {
-                  res.json({ message: "0" });
+            //console.log(result)
+              if(prediction === "0") {
+                  res.json(responseObject);
               } else {
-                  res.json({ message: "1" });
+                  res.json(responseObject);
               }
           } else {
               res.status(500).send('Python script exited with an error');
@@ -48,6 +63,7 @@ app.get('/endpoint/:id', (req, res) => {
       }
   });
 });
+
 
 app.listen(port, () => {
     console.log(`Server is running at http://localhost:${port}`);

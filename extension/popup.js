@@ -28,10 +28,11 @@ fetch(url)
         return response.json(); 
     })
     .then(data => {
-        console.log('Response from server:', data);
-        console.log(data.message);
+      //  console.log('Response from server:', data);
+       // console.log(data.prediction);
+        console.log(data.score);
         
-        if('0'===data.message)
+        if('0'===data.prediction)
         {
             let im = document.createElement("img");
             im.setAttribute("src", "./correct.png");
@@ -45,7 +46,7 @@ fetch(url)
             insscanning.appendChild(im);
             let lt = document.querySelector(".loading-paragraph");
             lt.classList.add("greencolor");
-            lt.innerHTML = "Safe account!";
+            lt.innerHTML = `Safe account! with score of ${data.score}`;
         }
         else{
             let im = document.createElement("img");
@@ -60,7 +61,7 @@ fetch(url)
             insscanning.appendChild(im);
         let lt=document.querySelector(".loading-paragraph");
         lt.classList.add("redcolor")
-        lt.innerHTML="Spam account!";
+        lt.innerHTML=`Spam Account with a score of ${data.score}`;
         }
     })
     .catch(error => {
